@@ -48,6 +48,7 @@ ul{
 }
 li{
     text-align: center; 
+    padding: 2px;
     list-style-type: none;
 }
 .container>h1{
