@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
     nextBtn.addEventListener('click',()=>{
         currentQuestionIndex++
         if(currentQuestionIndex<questionss.length){
-            showQuestion
+            showQuestion()
         }
         else{
             showResult()
@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showResult(){
         questionContainer.classList.add('hidden')
         resultContainer.classList.remove('hidden')
+        scoreDisplay.textContent=`${score}out of ${questionss.length}`
     }
     function startQuiz() {
         startBtn.classList.add('hidden')
