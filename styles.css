@@ -49,7 +49,16 @@ ul{
 li{
     text-align: center; 
     padding: 2px;
+    transition: transform 0.3s ease;
+    border: 1px solid #ffff;
+    margin: 5px;
+    width: 100px;
+
     list-style-type: none;
+}
+
+li:hover{
+    transform: scale(1.1);
 }
 
 button{
