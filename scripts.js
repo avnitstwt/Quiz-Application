@@ -117,4 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         nextBtn.classList.remove("hidden")
     }
-})
+})  
