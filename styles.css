@@ -14,6 +14,7 @@ body {
     background-color: #252424;
     align-items: center;   /* <-- This centers horizontally */
 }
+
 .hidden{
     display: none;
 }
@@ -38,6 +39,12 @@ body {
     justify-content: center;
 }
 
+#start-btn{
+    color: #ffff;
+    background-color: black;
+    /* transform: translate3d(0,0,0); */
+    border: 1px solid #ffffff;
+}
 #question-text{
     /* background-color: aqua; */
     padding: 5px;

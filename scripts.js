@@ -9,53 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const scoreDisplay = document.getElementById("score")
 
     console.log("Hellow world");
-
     const questionss = [
         {
             question: "What is the capital of France?",
             choices: ["Paris", "London", "Berlin", "Madrid"],
             answer: "Paris",
         },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
-        {
-            question: "Which planet is know as the Red Planet?",
-            choices: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-        },
+
         {
             question: "Which planet is know as the Red Planet?",
             choices: ["Mars", "Venus", "Jupiter", "Saturn"],
@@ -68,36 +28,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startBtn.addEventListener('click', startQuiz)
 
-    nextBtn.addEventListener('click',()=>{
+    nextBtn.addEventListener('click', () => {
         currentQuestionIndex++
-        if(currentQuestionIndex<questionss.length){
+
+        if (currentQuestionIndex < questionss.length) {
+            console.log('following if');
+            console.log(questionss.length);
+            console.log(currentQuestionIndex);
             showQuestion()
         }
-        else{
+        else {
+            console.log('following if');
+            console.log(questionss.length);
+            console.log(currentQuestionIndex);
             showResult()
+            // DELETE THE LINES THAT WERE HERE
         }
     })
 
-    function showResult(){
+    function showResult() {
         questionContainer.classList.add('hidden')
         resultContainer.classList.remove('hidden')
-        scoreDisplay.textContent=`${score}out of ${questionss.length}`
+        scoreDisplay.textContent = `${score}out of ${questionss.length}`
     }
     function startQuiz() {
+        console.log("s");
         startBtn.classList.add('hidden')
+        console.log("s");
         resultContainer.classList.add('hidden')
+        console.log("s");
         questionContainer.classList.remove('hidden')
+        console.log("s");
         showQuestion()
+        console.log("s");
         console.log("Hello workd");
+        console.log("s");
 
     }
-    restartBtn.addEventListener('click',()=>{
+    restartBtn.addEventListener('click', () => {
         score = 0
+        console.log(1)
+        currentQuestionIndex = 0
+        console.log(2)
         resultContainer.classList.add('hidden')
+        console.log(3)
         startQuiz()
+        console.log(4)
+        currentQuestionIndex = 0
+        console.log(5)
+        // log("hello world")
     })
 
     function showQuestion() {
+        console.log("ss");
+
         nextBtn.classList.add('hidden')
         questionText.textContent = questionss[currentQuestionIndex].question
         choicesList.innerHTML = ""
@@ -110,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function selectAnswer(choice) {
         console.log("hello");
-        
+
         const correctAnswer = questionss[currentQuestionIndex].answer
         if (choice === correctAnswer) {
             score++
