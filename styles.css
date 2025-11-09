@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+
+#result-container{
+    text-align: center;
+}
+#result-container>h2{
+    /* margin-bottom: 5px; */
+}
+
+#score{
+    padding: 10px;
+    color: violet;
+    font-size: 25px;
+}
+
+
 body {
     color: #ffffff;
     min-height: 100vh; /* <-- Better than height: 100% */
