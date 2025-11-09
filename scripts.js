@@ -38,29 +38,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     function showResult() {
-        // questionContainer.classList.add('hidden');
+        questionContainer.classList.add('hidden');
         resultContainer.classList.remove('hidden');
-        questionText.classList.add('hidden')
-        choicesList.classList.add('hidden')
         scoreDisplay.textContent = `${score} out of ${questionss.length}`;
     }
-    
+
     function startQuiz() {
         startBtn.classList.add('hidden');
         resultContainer.classList.add('hidden');
         questionContainer.classList.remove('hidden');
         showQuestion();
     }
-    
+
     restartBtn.addEventListener('click', () => {
         score = 0;
         currentQuestionIndex = 0;
-        questionText.classList.remove('hidden')
-        choicesList.classList.remove('hidden')
         resultContainer.classList.add('hidden');
         startQuiz();
     });
-    
+
     function showQuestion() {
         nextBtn.classList.add('hidden');
         questionText.textContent = questionss[currentQuestionIndex].question;
@@ -72,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             choicesList.appendChild(li);
         });
     }
-    
+
     function selectAnswer(choice) {
         const correctAnswer = questionss[currentQuestionIndex].answer;
         if (choice === correctAnswer) {
